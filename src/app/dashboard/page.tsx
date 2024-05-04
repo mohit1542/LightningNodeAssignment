@@ -25,19 +25,14 @@ const CryptoTable: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [selectedCrypto, setSelectedCrypto] = useState<Crypto | null>(null);
   const [sortConfig, setSortConfig] = useState<{ key: string; direction: string }>({ key: 'changePercent', direction: 'desc' });
-  const [userEmail, setUserEmail] = useState<string | null>(null);
+ 
 
   const router = useRouter();
   const auth =getAuth();
 
-
-
   const welcomeMessage = "Welcome to Pi42! Today's update on Bitcoin."
 
   useEffect(() => {
-    if (auth.currentUser) {
-      setUserEmail(auth.currentUser.email);
-    }
 
       const socket = new WebSocket('wss://fawss.pi42.com/socket.io/?EIO=4&transport=websocket');
       socket.onopen = () => socket.send('40');
@@ -115,9 +110,6 @@ const CryptoTable: React.FC = () => {
     <Typography variant="h5" align="center" gutterBottom>{welcomeMessage}</Typography>
 
     <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-  <Typography variant="body1" sx={{ marginRight: '10px' }}>
-    {userEmail}
-  </Typography>
   <Button variant="contained" color="secondary" onClick={handleSignOut}>
     Sign Out
   </Button>

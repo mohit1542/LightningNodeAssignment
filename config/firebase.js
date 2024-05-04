@@ -8,12 +8,12 @@ import {
 } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_Firebase_API_Key,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    apiKey: "AIzaSyCRX_ngaOYtxI0GQM-LhyV4Rkf30bB5zIY",
+    authDomain: "lightningnode-60dc0.firebaseapp.com",
+    projectId: "lightningnode-60dc0",
+    storageBucket: "lightningnode-60dc0.appspot.com",
+    messagingSenderId: "1075221583613",
+    appId: "1:1075221583613:web:b52326369ddaa358b89094"
 };
 
 initializeApp(firebaseConfig);

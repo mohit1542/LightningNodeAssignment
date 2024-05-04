@@ -16,6 +16,8 @@
 # production
 /build
 
+/config/firebase.js
+
 # misc
 .DS_Store
 *.pem
